@@ -22,6 +22,7 @@ public:
     T queueLeave();
     T stackPop();
     T listRemove(T value);
+    void reverse();
 };
 
 #endif

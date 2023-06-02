@@ -17,6 +17,7 @@ int main () {
         queue.Insert(i);
         stack.Insert(i);
     }
+    
     cout << "Original:\n";
     printer(list, queue, stack);
     
@@ -25,6 +26,13 @@ int main () {
     stack.stackPop();
 
     cout << "Removing some elements:\n";
+    printer(list, queue, stack);
+    
+    list.reverse();
+    queue.reverse();
+    stack.reverse();
+
+    cout << "Reverse:\n";
     printer(list, queue, stack);
 
     return 0;

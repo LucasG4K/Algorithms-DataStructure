@@ -82,3 +82,21 @@ T Sequence<T>::listRemove(T value) {
     cout << "Given value wasn't in list!\n";
     return 0;
 }
+
+template<typename T>
+void Sequence<T>::reverse() {
+    Node<T>* previous = nullptr;
+    Node<T>* current = begin->next;
+    Node<T>* next = nullptr;
+
+    while (current != nullptr) {
+        next = current->next;
+        current->next = previous;
+        previous = current;
+        current = next;
+    }
+
+    Node<T>* temp = begin;
+    begin->next = end;
+    end = temp;
+}
